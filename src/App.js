@@ -7,7 +7,8 @@ function App() {
   const [weatherData, setWeatherData] = useState(null); // to store the fetched weather data
   const [error, setError] = useState(""); // to store error messages
 
-  const API_KEY = "0e589f722d7d07f0ed565fda8a01a184"; // Replace with your OpenWeatherMap API key
+  // const API_KEY = "0e589f722d7d07f0ed565fda8a01a184"; // Replace with your OpenWeatherMap API key
+  const API_KEY = process.env.REACT_APP_API_KEY;
 
   // Fetch weather data when the user submits the city name
   const fetchWeather = async () => {
